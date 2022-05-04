@@ -1,0 +1,13 @@
+<h1>All Flats</h1>
+
+<ul>
+  <%@flats.each do |flat|%>
+    <li>Name: <%=link_to flat.name, flat_path(flat.id)%></li>
+    <p>Address: <%=flat.address%></p>
+    <p>Description: <%=flat.description%></p>
+    <p>Price per night: <%=flat.price_per_night%></p>
+    <p>Number of guests <%=flat.number_of_guests%></p>
+  <%end%>
+</ul>
+
+<%= link_to "add a flat", new_flat_path%>
